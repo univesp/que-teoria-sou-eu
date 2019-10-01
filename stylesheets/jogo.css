@@ -1,0 +1,229 @@
+/* CORES
+Vermelho  #CE5567
+Verde     #37A0AE
+ */
+
+
+/* JOGO */
+.jogo {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+/* DECK */
+.coluna1 {
+  margin-right: 2rem;
+  flex-grow: 1;
+  flex-basis: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.coluna1 .desktop {
+  padding-right: 50px;
+  padding-top: 50px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.coluna1 .desktop h5 {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #37A0AE;
+}
+.coluna1 .desktop .deck {
+  width: 290px;
+  height: 410px;
+  margin-bottom: 2rem;
+  cursor: not-allowed;
+}
+.coluna1 .desktop .deck.desbloq {
+  cursor: pointer;
+}
+.coluna1 .mobile {
+  display: none;
+}
+
+
+.deck p {
+  position: absolute;
+  top: 12%;
+  width: 70%;
+  left: 15%;
+  font-style: italic;
+  font-weight: 700;
+  color: #0C2443;
+}
+.deck .monte-top {
+  position: absolute;
+  z-index: 100;
+  transform: rotate(-2deg);
+}
+.deck img, .deck .monte div {
+  box-sizing: border-box;
+  width: 290px;
+  height: 410px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.deck .monte {
+  position: absolute;
+  transition: .3s;
+  /* z-index: 50!important; */
+}
+.deck .monte>div {
+  border: 3px solid #6FC5D1;
+  position: relative;
+  background-color: #fff;
+  background-image: url("../assets/deck-monte.svg");
+
+}
+.deck .monte:nth-of-type(1) {
+  z-index: 20;
+}
+.deck .monte:nth-of-type(1)>div{
+  transform: translate(8px, -20px) rotate(1deg);
+}
+.deck .monte:nth-of-type(2) {
+  z-index: 19;
+}
+.deck .monte:nth-of-type(2)>div{
+  transform: translate(-4px, -22px) rotate(-5deg);
+}
+.deck .monte:nth-of-type(3) {
+  z-index: 10;
+}
+.deck .monte:nth-of-type(3)>div{
+  transform: translate(1px, -41px) rotate(0deg);
+}
+.deck .monte:nth-of-type(4) {
+  z-index: 9;
+}
+.deck .monte:nth-of-type(4)>div{
+  transform: translate(7px, -42px) rotate(-5deg);
+}
+.deck .monte:nth-of-type(n+5) {
+  z-index: 15;
+}
+.deck .monte:nth-of-type(n+5)>div{
+  transform: translate(1px, -41px) rotate(0deg);
+  box-shadow: none;
+}
+
+/* HOVER DECK */
+.deck:hover .proxima-carta.liberado {
+  transform: translate(0px, -20px) rotate(0deg);
+}
+
+/* CARTA */
+.jogo .carta {
+  width: 440px;
+  position: relative;
+}
+
+/* RESPOSTAS */
+.jogo .respostas {
+  margin-left: 2rem;
+  flex-grow: 1;
+  flex-basis: 320px;
+  display: flex;
+  /* flex-direction: column; */
+}
+.jogo .respostas>div {
+  width: 14rem;
+}
+.respostas>div {
+  display: none;
+}
+#botao-responder, .alternativas div {
+  /* padding: 10px 25px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: calc(1rem + 24px);
+}
+#botao-responder {
+  background-color: #CE5567;
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+  z-index: 10;
+}
+#botao-responder:hover, #botao-responder.acionado  {
+  background-color: #BA354E;
+}
+#botao-responder.desligado {
+  background-color: #EFEFEF;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.alternativas.recolhido div {
+  margin-top: calc(-1rem - 24px);
+  opacity: 0;
+  pointer-events: none;
+}
+.alternativas div {
+  margin-top: 8px;
+  background-color: #fff;
+  border: 1px solid black;
+  opacity: 1;
+  transition: .5s;
+  position: relative;
+}
+.alternativas div:hover {
+  background-color: #e8e8e8;
+}
+.alternativas .resp-certa, .alternativas .resp-certa:hover {
+  background-color: #D6E8EA;
+  border: 1px solid #6FC5D1;
+}
+.alternativas .resp-errada, .alternativas .resp-errada:hover {
+  background-color: #E2B3B7;
+  border: 1px solid #BA354E;
+}
+.alternativas .bloqueado, #botao-responder.bloqueado {
+  cursor: default;
+  pointer-events:none;
+}
+.feedback-imediato, .feedback-esgotado, .feedback-esgotado-final {
+  display: none;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #CE5567;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+@media (min-width: 576px) {
+  .feedback-correto, .feedback-correto-final {
+    display: none!important;
+  }
+}
+
+#card1,
+#card2,
+/* #card3, */
+#card4,
+#card5,
+#card6,
+#card7,
+#card8,
+#card9,
+#card10
+ {
+  display: none;
+}

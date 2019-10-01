@@ -1,0 +1,163 @@
+@media (max-width: 1199.98px) {
+  .jogo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .jogo div {
+    /* border: 1px solid red; */
+  }
+  /* COLUNA 1 */
+  .coluna1 {
+    display: block;
+    margin: 0;
+    flex-basis: auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  .coluna1 .desktop {
+    display: none;
+  }
+  .coluna1 .mobile {
+    display: block;
+  }
+  .coluna1 .mobile .deck {
+    display: flex;
+    cursor: pointer;
+    background-color: #EFEFEF;
+    padding: .6rem;
+    align-items: center;
+    min-height: 70px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  .coluna1 .mobile .deck.desbloq {
+    background-color: #CE5567;
+  }
+  .coluna1 .mobile .deck img {
+    box-shadow: none;
+    height: auto;
+  }
+  .coluna1 .mobile .deck img:first-of-type {
+    max-width: 30%;
+    width: 120px;
+    margin-top: -10%;
+    margin-bottom: -10%;
+  }
+  .coluna1 .mobile .deck img:last-of-type {
+    display: block;
+    position: absolute;
+    left: 1.2rem;
+    width: 80px;
+    max-width: 20%;
+  }
+  .coluna1 .mobile .deck.desbloq img:last-of-type {
+    display: none;
+  }
+
+
+  .coluna1 .mobile .deck>div {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .coluna1 .mobile .deck p {
+    width: 100%;
+    position: static;
+    text-align: left;
+    margin-bottom: 5px;
+    font-style: normal;
+    color: #fff;
+  }
+  .coluna1 .mobile .deck h5 {
+    text-align: left;
+    margin-bottom: 0;
+    font-style: normal;
+    font-size: 1rem;
+    color: #fff;
+  }
+}
+@media (max-width: 575.98px) {
+/* CARTAS */
+  .jogo .carta {
+    /* position: relative; */
+    width: 100%;
+  }
+  .jogo .carta .card-container {
+    position: relative;
+  }
+  .jogo .carta .card-container .card .front {
+    min-height: 70vh;
+  }
+  .carta .dica {
+    order: 2;
+  }
+  .carta .instrucoes-carta {
+    order: 1;
+    position: static;
+  }
+  .animated.fadeOut {
+    position: absolute!important;
+  }
+  .card .back p {
+    font-size: 20px;
+  }
+  .card .back h4 {
+    font-size: 20px;
+  }
+  .jogo .respostas {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+    /* position: fixed; */
+    z-index: 500;
+    bottom: 0;
+    /* box-shadow: 0 -1px 2px rgba(0,2,0,0.24); */
+    flex-basis: 0;
+  }
+  .jogo .respostas>div {
+    width: 100%;
+    /* display: block; */
+    bottom: 0;
+    left: 0;
+  }
+  .alternativas div {
+    margin-top: 0;
+    height: 2.8rem;
+    border: 0;
+  }
+  .alternativas.recolhido div {
+    margin-top: calc(-2.8rem);
+  }
+  .alternativas div:not(:last-of-type){
+    border-bottom: 1px solid #808080;
+  }
+  .alternativas .resp-errada, .alternativas .resp-errada:hover {
+    border: inherit;
+  }
+  .feedback-imediato, .feedback-esgotado, .feedback-correto, .feedback-correto-final, .feedback-esgotado-final {
+    display: none;
+    margin-top: 0rem;
+    padding: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+  }
+  .feedback-imediato, .feedback-esgotado, .feedback-esgotado-final {
+    background-color: #CE5567;
+  }
+  .feedback-correto, .feedback-correto-final {
+    background-color: #37A0AE;
+  }
+  .fecha-feedback {
+    padding: 5px;
+    border: 1px solid #fff;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+
+}

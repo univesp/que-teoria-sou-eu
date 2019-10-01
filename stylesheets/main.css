@@ -1,0 +1,197 @@
+/* CORES
+Vermelho    #CE5567
+Verde       #37A0AE
+Azul escuro #0C2443
+ */
+
+body {
+
+}
+
+main {
+  justify-content: center;
+}
+
+main p {
+  text-align: center;
+}
+
+h2, h3 {
+  text-align: center;
+  font-family: 'Barlow', serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* INÍCIO */
+h2 {
+  font-size: 5rem;
+  color: #37A0AE;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1000px) {
+  h2 {
+    max-width: 30rem;
+  }
+}
+@media (max-width: 767.98px) {
+  h2 {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  h2 {
+    /* font-size: 3rem;
+    max-width: 20rem; */
+  }
+}
+@media (max-width: 499px) {
+    h2 {
+      font-size: 3rem;
+      max-width: 20rem;
+    }
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.intro p {
+  max-width: 800px;
+}
+.abordagens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.abordagens>div{
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+.abordagens img {
+  width: 160px;
+  margin-bottom: 1rem;
+}
+.instrucoes {
+  background-color: #EFEFEF;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* INSTRUÇõES */
+.instrucoes h3 {
+  color: #CE5567;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.instrucoes .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ol {
+  padding: 0;
+  counter-reset: item;
+}
+ol > li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 1.5em;
+  list-style-type: none;
+  counter-increment: item;
+}
+ol > li:before {
+  position: absolute;
+  left: 0px;
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
+}
+
+/* RESULTADOS */
+.resultado {
+  background-color: #0C2443;
+  color: #fff;
+  /* padding-top: 2.5rem;
+  padding-bottom: 2.5rem; */
+  transition: .7s;
+}
+.resultado h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.resultado p:last-child {
+  margin-bottom: 0;
+}
+.resultado * {
+  max-width: 600px;
+}
+.resultado .container {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.resultado a {
+  color: #fff;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* CONCLUSÃO */
+.divisoria {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  max-width: 80%;
+  z-index: -1;
+}
+.divisoria>div {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.divisoria>div>div {
+  width: 100%;
+  border-bottom: 3px solid #CE5567;
+}
+.divisoria img {
+  width: 22px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.conclusao p {
+  max-width: 750px;
+}
+.conclusao p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+@media (max-width: 575.98px) {
+
+}

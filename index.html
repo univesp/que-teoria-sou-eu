@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description"
+  content="Ao longo da História da Educação, foram formuladas diversas abordagens teóricas a respeito do ensino e da aprendizagem. Este jogo, inspirado no clássico Perfil, consiste em descobrir qual é a teoria a partir de suas características, ideias, autores e concepções principais.">
+
+  <meta name="keywords" content="psicologia da educação, psicologia, educação, ensino, teorias, aprendizagem, behaviorismo, cognitivismo, humanismo, Piaget, Skinner, Paulo Freire">
+
+  <title>Univesp | Que teoria sou eu?</title>
+
+  <link rel="shortcut icon" href="http://apps.univesp.br/common/favicon.ico" type="image/x-icon"/>
+
+  <!-- Arquivos Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,700|Open+Sans:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-2.0.css">
+  <link rel="stylesheet" href="stylesheets/nav_footer.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="stylesheets/jogo.css">
+  <link rel="stylesheet" href="stylesheets/rotating-card.css">
+  <link rel="stylesheet" href="stylesheets/animate.css">
+  <link rel="stylesheet" href="stylesheets/mobile.css">
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <!-- Menu -->
+  <nav>
+    <div class="container d-flex justify-content-between">
+      <div class="logo">
+        <a class="pularNavegacao" href="#conteudoPrincipal">Pular para Conteúdo Principal</a>
+        <a href="https://univesp.br/" target="_blank">
+          <img src="https://apps.univesp.br/common/traco-negativa.svg" alt="Link para site institucional. Logotipo da universidade formado pela palavra Univesp em letras maiúsculas, sendo a letra V estilizada.">
+          <!-- outras opções de img src: colorida-negativa.svg, traco-positiva.svg, traco-negativa.svg -->
+        </a>
+      </div>
+      <ul class="nav justify-content-end">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons" aria-label="Opções de Compartilhamento">share</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="sharing" id="share-buttons"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal" class="d-flex flex-column">
+
+    <!-- INTRO -->
+    <div class="container intro">
+      <h2>Que teoria sou eu?</h2>
+      <img src="assets/div-1.svg"/ style="width: 200px; margin-bottom: 3rem;">
+      <p>
+        Ao longo da História da Educação, formularam-se diversas abordagens teóricas a respeito do ensino e da aprendizagem. Cada qual a seu modo, essas correntes defendem diferentes concepções de ser humano, sociedade, conhecimento e escola, por exemplo.
+      </p>
+      <p>
+        Cada uma delas foi defendida por determinados autores e todas nos trazem contribuições válidas para refletirmos sobre a Educação contemporânea.<br />
+        Neste jogo, vamos retomar cinco dessas abordagens:
+      </p>
+      <img src="assets/seta.svg"/ style="width: 50px; margin-top: 2rem; margin-bottom: 2rem;">
+      <!-- Abordagens -->
+      <div class="abordagens">
+        <div>
+          <img src="assets/t-trad.svg"/>
+          <p>
+            Tradicional
+          </p>
+        </div>
+        <div>
+          <img src="assets/t-comport.svg"/>
+          <p>
+            Comportamentalista
+          </p>
+        </div>
+        <div>
+          <img src="assets/t-human.svg"/>
+          <p>
+            Humanista
+          </p>
+        </div>
+        <div>
+          <img src="assets/t-cogni.svg"/>
+          <p>
+            Cognitivista
+          </p>
+        </div>
+        <div>
+          <img src="assets/t-socio.svg"/>
+          <p>
+            Sociocultural
+          </p>
+        </div>
+      </div>
+      <p>
+        O objetivo do jogo é descobrir qual é a teoria a partir de suas características.<br /> Quanto menos dicas você precisar para acertar, mais pontos você ganha!
+      </p>
+    </div>
+
+    <!-- INSTRUÇõES -->
+    <div class="container-fluid instrucoes">
+      <div class="container">
+        <h3>Vamos jogar?</h3>
+        <ol>
+          <li>
+            Clique sobre o baralho a seguir para abrir a primeira carta.
+          </li>
+          <li>
+            Com a carta aberta, clique sobre um número para ver a dica correlata.
+          </li>
+          <li>
+            Depois de ler a dica, você pode tentar acertar a abordagem teórica correspondente.
+          </li>
+          <li>
+            Se preferir, você pode pedir mais uma dica antes de tentar acertar.
+          </li>
+          <li>
+            Quanto menos dicas você utilizar, maior será sua pontuação.
+          </li>
+          <li>
+            Depois que você descobrir a respectiva teoria, uma segunda carta será desbloqueada.
+          </li>
+          <li>
+            A pontuação máxima do jogo é de 150 pontos.
+          </li>
+          <p style="text-align: left; margin-top:1rem; margin-bottom: 0">
+            <strong>ATENÇÃO:</strong> a cada tentativa incorreta você perde 1 ponto.<br />
+            Portanto, chutar sem critério pode não ser uma boa ideia =)
+          </p>
+        </ol>
+
+      </div>
+    </div>
+
+    <!-- JOGO -->
+    <div class="container-fluid jogo">
+      <div class="coluna1">
+        <!-- interface desktop -->
+        <div class="desktop">
+          <div class="deck desbloq">
+            <div class="monte"><div></div></div>
+            <div class="monte"><div></div></div>
+            <div class="monte"><div></div></div>
+            <div class="monte"><div></div></div>
+            <div class="monte"><div></div></div>
+            <div class="monte"><div></div></div>
+            <div class="monte"><div></div></div>
+            <div class="monte"><div></div></div>
+            <div class="monte"><div></div></div>
+            <div class="monte proxima-carta liberado"><div></div></div>
+            <div class="monte-top">
+              <img src="assets/deck-top.svg"/>
+              <p class="cliqueCarta">
+                Clique aqui<br /> para abrir uma carta
+              </p>
+            </div>
+          </div>
+          <h5></h5>
+        </div>
+        <!-- interface mobile -->
+        <div class="mobile">
+          <div class="deck desbloq">
+            <img src="assets/deck-mobile.svg"/>
+            <img src="assets/bloq.svg"/>            
+            <div>
+              <p>
+                Clique aqui para abrir uma carta
+              </p>
+              <h5></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta">
+
+        <!-- CARTA 1 -->
+        <div class="card-container manual-flip"  id="card1">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse">
+                  Vejo o ser humano como uma tábula rasa, um receptor passivo que acumula informações e as reproduz.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse">
+                  Escola, para mim, deve ser um ambiente austero, onde o aluno não se distraia.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse">
+                  Minha aula se baseia no modelo expositivo, com conteúdo pronto e aluno passivo.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse">
+                  Defendo a aprendizagem padronizada, a rotina e a memorização.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse">
+                  Aqui, o professor detém o poder decisório quanto à metodologia, ao conteúdo e à avaliação, conduzindo os alunos e transmitindo conhecimentos.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse">
+                  Um dos autores ligados a esta abordagem é Dürkheim.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse">
+                  Creio no caráter cumulativo do conhecimento humano, que é adquirido por meio da transmissão (educação formal/escola).
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse">
+                  As relações, na minha escola, são verticais e individualistas.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-trad.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Tradicional
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTA 2 -->
+        <div class="card-container manual-flip"  id="card2">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse">
+                  Acredito que a sociedade perpetua a ordem estabelecida por meio da reprodução do conhecimento.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse">
+                  Minha avaliação mede a quantidade e a exatidão de informações que o aluno consegue reproduzir.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse">
+                  Vejo a Educação como um produto, com resultados e modelos pré-estabelecidos.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse">
+                  Alguns de meus autores são Chartier e Snyders.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse">
+                  Para mim, inteligência é a capacidade de acumular / armazenar informações, das mais simples às mais complexas.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse">
+                  A escola, para mim, está restrita a um processo de transmissão de ideias e informações.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse">
+                  Utilizo o método maiêutico: o professor dirige a classe a um resultado desejado, seguindo passos para chegar ao objetivo proposto.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse">
+                  Acredito que as notas obtidas pelo aluno são demonstração de patrimônio cultural.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-trad.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Tradicional
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTA 3 -->
+
+
+        <div class="card-container manual-flip maior-carta"  id="card3">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse show">
+                  Aqui, a Educação assume poder controlador, cuja finalidade é promover mudanças desejáveis em direção ao autocontrole e à maior liberdade.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse show">
+                  Vejo a aprendizagem como mudança comportamental e/ou mental na vida do indivíduo, resultado de uma prática reforçada.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse show">
+                  A meu ver, o conhecimento é resultado direto da experiência planejada, já que é possível controlar o comportamento observável.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse show">
+                  Acredito que a sociedade pode ser planejada e controlada para o bem-estar das pessoas, aplicando-se a teoria do reforço.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse show">
+                  Vejo a escola como uma agência educacional de controle de comportamentos que pretende instalar e manter.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse show">
+                  Defendo que o professor deve ser como um engenheiro comportamental, controlando os passos e percursos de aprendizagem.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse show">
+                  Minhas práticas de ensino incluem a especificação de objetivos, o feedback constante e o ensino modular.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse show">
+                  Alguns de meus autores são Skinner, Popham, Gerlach e Briggs.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-comport.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Comportamentalista
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTA 4 -->
+        <div class="card-container manual-flip"  id="card4">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse">
+                  Alguns de meus autores são Glaser, Papay e Madsen.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse">
+                  Para mim, o indivíduo é consequência das influências ou forças existentes no ambiente.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse">
+                  Acredito que a cultura é representada pelos costumes dominantes e pelos comportamentos reforçados na medida em que servem ao poder.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse">
+                  Tento prever e controlar o comportamento, que acredito ser regido por leis identificadas.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse">
+                  A Educação para mim é a transmissão cultural de conhecimentos e comportamentos.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse">
+                  Vejo a escola como uma instituição que atua em conjunto com outras agências controladoras da sociedade (governo, política, economia).
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse">
+                  Ensinar, para mim, é planejar condicionantes que assegurem a aquisição do comportamento desejável (elogios, notas, diplomas).
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse">
+                  Minha avaliação consiste em constatar se o aluno atingiu os objetivos propostos no início, no decorrer do processo e no final.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-comport.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Comportamentalista
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTA 5 -->
+        <div class="card-container manual-flip"  id="card5">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse">
+                  Um de meus principais autores é Carl Rogers.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse">
+                  Defendo a educação democrática, centrada no aluno, incentivando a autonomia e o espírito livre e criativo.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse">
+                  Minhas práticas de ensino estimulam a curiosidade. O aluno escolhe o que quer aprender, e o conteúdo deve ser significativo.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse">
+                  Desprezo padronização de produtos de aprendizagem e competências.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse">
+                  Não aceito um projeto de planificação social, nem o controle e a manipulação das pessoas.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse">
+                  Defendo que o relacionamento entre professor e aluno é pessoal e único.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse">
+                  Acredito que, ao experienciar, o sujeito conhece. O conhecimento é construído na experiência pessoal e subjetiva.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse">
+                  Meu método é não diretivo: dirigir a pessoa à sua própria experiência, para que ela possa estruturar-se e agir.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-human.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Humanista
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTA 6 -->
+        <div class="card-container manual-flip"  id="card6">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse">
+                  Para mim, a escola deve respeitar a criança e oferecer condições para que ela se desenvolva.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse">
+                  Acredito que cada pessoa no mundo é única, portanto não existem modelos prontos ou regras a seguir.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse">
+                  Entre meus autores, destacam-se Alexander Neill e Erich Fromm.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse">
+                  Vejo o docente como uma personalidade única, que assume a função de facilitador da aprendizagem.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse">
+                  Não trato especificamente de sociedade, mas me preocupo com a pessoa, a confiança no humano e no pequeno grupo.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse">
+                  Meu objetivo básico é liberar no aluno a capacidade de autoaprendizagem (desenvolvimento intelectual e emocional).
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse">
+                  Defendo a autoavaliação com critérios: só o indivíduo pode conhecer sua própria experiência.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse">
+                  Para mim, o conhecimento é construído no decorrer do processo de vir-a-ser da pessoa humana.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-human.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Humanista
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTA 7 -->
+        <div class="card-container manual-flip"  id="card7">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse">
+                  Minha avaliação deve ser apoiada em múltiplos critérios, considerando a assimilação e a aplicação do conhecimento.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse">
+                  Defendo que a escola deve possibilitar ao aluno o desenvolvimento de suas possibilidades (motoras, verbais e mentais) para que ele possa intervir e inovar a sociedade.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse">
+                  Minha didática é baseada na investigação, com experiências e jogos feitos pelos alunos em um ambiente desafiador.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse">
+                  A meu ver, o objetivo da educação é que o aluno aprenda por si próprio (autonomia intelectual).
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse">
+                  Meu autor mais conhecido é Jean Piaget.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse">
+                  Acredito no conhecimento como fruto da interação entre mundo, sujeito e objeto.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse">
+                  Aqui, o ensino e a aprendizagem se baseiam em ensaio e erro, na pesquisa, na investigação e na solução de problemas.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse">
+                  Para mim, a sociedade deve caminhar no sentido da democracia, com a participação ativa na elaboração de regras comuns para o grupo.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-cogni.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Cognitivista
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTA 8 -->
+        <div class="card-container manual-flip"  id="card8">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse">
+                  Em minha concepção, o desenvolvimento do ser humano ocorre por fases que se inter-relacionam e se sucedem (estágios).
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse">
+                  Acredito na livre cooperação dos alunos entre si e não apenas entre professor e aluno. O professor também deve ser pesquisador, investigador.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse">
+                  Entre meus autores estão Jerome Bruner e Henry Wallon.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse">
+                  Acredito em um processo progressivo de assimilação, acomodação e superação.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse">
+                  Para mim, toda atividade humana envolve inteligência e afetividade.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse">
+                  Divido a aquisição do conhecimento em duas fases: exógena (cópia, repetição) e endógena (compreensão).
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse">
+                  Vejo a Educação como um todo indissociável formado pelos elementos intelectual e moral.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse">
+                  Priorizo o sujeito ativo e o desenvolvimento da inteligência.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-cogni.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Cognitivista
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTA 9 -->
+        <div class="card-container manual-flip"  id="card9">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse">
+                  Minhas práticas de ensino são ativas, dialógicas e críticas.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse">
+                  Alguns de meus autores são Vygotsky e Álvaro Vieira Pinto.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse">
+                  Acredito em uma relação professor-aluno que seja horizontal.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse">
+                  A meu ver, a Educação não é neutra, mas sim um ato político, que não é restrito à escola.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse">
+                  Acredito no conhecimento como conscientização, isto é, progressivo desvelamento da realidade (reflexão crítica).
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse">
+                  Aqui, a participação do ser humano como sujeito na sociedade, na cultura e na História se faz na medida de sua conscientização.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse">
+                  Defendo uma educação problematizadora, em que o ensino e a aprendizagem devem buscar superar a relação opressor-oprimido.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse">
+                  Vejo o ser humano como o sujeito da Educação, o elaborador e o criador do conhecimento.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-socio.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Sociocultural
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTA 10 -->
+        <div class="card-container manual-flip"  id="card10">
+          <div class="card">
+            <div class="front">
+              <div class="dica">
+                <div>
+                  1
+                </div>
+                <div class="collapse">
+                  Para mim, a escola deve possibilitar o crescimento mútuo de professores e alunos.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  2
+                </div>
+                <div class="collapse">
+                  Defendo a autoavaliação e/ou a avaliação mútua e permanente, por professor e aluno.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  3
+                </div>
+                <div class="collapse">
+                  Um de meus autores mais importantes é Paulo Freire.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  4
+                </div>
+                <div class="collapse">
+                  Acredito que o professor deve valorizar a linguagem e a cultura do aluno e, junto a ele, questionar a cultura dominante.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  5
+                </div>
+                <div class="collapse">
+                  Busco superar a dicotomia sujeito-objeto.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  6
+                </div>
+                <div class="collapse">
+                  Antes da ação educativa, procuro refletir sobre o homem e analisar o meio de vida desse homem concreto, que é sujeito da educação.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  7
+                </div>
+                <div class="collapse">
+                  Para mim, a Educação tem caráter utópico.
+                </div>
+              </div>
+              <div class="dica">
+                <div>
+                  8
+                </div>
+                <div class="collapse">
+                  Vejo a escola como uma instituição que existe num contexto histórico de uma determinada sociedade.
+                </div>
+              </div>
+              <div class="instrucoes-carta">
+                Clique nos botões para abrir as dicas
+              </div>
+            </div>
+            <div class="back">
+              <img src="assets/t-socio.svg"/>
+              <p>
+                eu sou a abordagem
+              </p>
+              <h4>
+              Sociocultural
+              </h4>
+              <p>
+                Clique para virar
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="respostas">
+        <div>
+          <div id="botao-responder" class="desligado">
+            JÁ SEI!
+          </div>
+          <div class="alternativas recolhido">
+            <div style="z-index: 5">
+              Tradicional
+            </div>
+            <div style="z-index: 4">
+              Comportamentalista
+            </div>
+            <div style="z-index: 3">
+              Humanista
+            </div>
+            <div style="z-index: 2">
+              Cognitivista
+            </div>
+            <div style="z-index: 1">
+              Sociocultural
+            </div>
+          </div>
+          <div class="feedback-imediato">
+            Ops! Não foi dessa vez...<br />
+            Peça mais uma dica.
+            <div class="d-flex d-sm-none fecha-feedback">
+              OK
+            </div>
+          </div>
+          <div class="feedback-esgotado">
+            Suas dicas se esgotaram. =(<br/>
+            Confira a resposta, revise as dicas e siga para a próxima carta.
+            <div class="d-flex d-sm-none fecha-feedback">
+              OK
+            </div>
+          </div>
+          <div class="feedback-esgotado-final">
+            Suas dicas se esgotaram. =(<br/>
+            Confira a resposta, revise as dicas e veja a sua pontuação final.
+            <div class="d-flex d-sm-none fecha-feedback">
+              OK
+            </div>
+          </div>
+          <div class="feedback-correto">
+            Correto. =)<br/>
+            <span style="font-weight:400;">Clique sobre a carta para rever as dicas, ou sobre o botão superior para abrir a próxima carta.</span>
+            <div class="d-flex d-sm-none fecha-feedback">
+              OK
+            </div>
+          </div>
+          <div class="feedback-correto-final">
+            Correto. =)<br/>
+            <span style="font-weight:400;">Prossiga para conferir a sua pontuação final.</span>
+            <div class="d-flex d-sm-none fecha-feedback">
+              Vamos lá!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid resultado collapse">
+      <div class="container">
+        <h4>Você fez <span></span> pontos</h4>
+      </div>
+    </div>
+
+    <div class="container d-flex flex-column align-items-center conclusao">
+      <div class="divisoria">
+        <div><div></div></div>
+        <img src="assets/div-ponta.svg"/>
+        <img src="assets/div-meio.svg"/>
+        <img src="assets/div-ponta.svg" style="transform: rotate(180deg)"/>
+      </div>
+
+      <p>
+        Ao conhecer mais sobre as diversas teorias de ensino e aprendizagem, você pode ter se identificado mais com uma ou outra, o que é normal. =)
+      </p>
+      <p>
+        O importante é conhecer os aspectos centrais de cada abordagem e, também, refletir sobre os limites e contribuições de cada teoria ao contexto escolar atual.
+      </p>
+      <div class="divisoria">
+        <div><div></div></div>
+        <img src="assets/div-ponta.svg"/>
+        <img src="assets/div-meio.svg"/>
+        <img src="assets/div-ponta.svg" style="transform: rotate(180deg)"/>
+      </div>
+    </div>
+
+
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="cred-rea">
+
+        <!-- Comente em caso de adaptação do REA -->
+        <p>
+          <span>Recurso Educacional Aberto (REA) desenvolvido pela <a href="https://univesp.br/" target="blank">Univesp</a>, disponível sob licença <a href="http://apps.univesp.br/common/license_MIT_2019.txt" target="_blank">MIT</a>.
+          Você pode utilizá-lo, compartilhá-lo e modificá-lo.</span>
+          <span><button class="btn btn-link" data-toggle="modal" data-target="#creditos">Créditos</button></span>
+          <span><a href="https://github.com/univesp/etica-profissional-e-responsabilidade-funcional" target="_blank" aria-label="GitHub">GitHub <i class="fab fa-github"></i></a></span>.
+        <p>
+        <!-- Descomente em caso de adaptação do REA -->
+        <!-- <p>
+          <span>Recurso Educacional Aberto (REA) adaptado por SEU NOME.</span>
+          <span><a href="#">Versão original da Univesp</a></span>
+        </p> -->
+      </div>
+
+      <div class="aval-rea d-flex">
+       <!-- Atualizar "Nome+do+Recurso" -->
+       <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSd0R9PtJ6gsMVvX4CtpwNEB-NWVp478WPbp90eThdkN9SZ4Ew/viewform?usp=pp_url&amp;entry.542052009=Que+Teoria+Sou+Eu" target="_blank">Avaliar este recurso</a>
+
+       <!-- Atualizar "Nome+do+Recurso" -->
+       <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdQrNoarS5M_II74dBQ8YXXeFWPG7By80XwytBeP4vEaYO26g/viewform?usp=pp_url&amp;entry.1523910789=Que+Teoria+Sou+Eu" target="_blank">Reportar erro</a>
+     </div>
+
+    </div>
+  </footer>
+  <!-- Fim do rodapé -->
+
+  <!-- Créditos -->
+  <div class="modal fade" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <h6>Governo do Estado de São Paulo</h6>
+          <p>Secretaria de Desenvolvimento Econômico</p>
+
+          <h6>UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO – UNIVESP</h6>
+          <p><span class="funcao">Presidente</span>Rodolfo Jardim de Azevedo</p>
+          <p><span class="funcao">Diretora Acadêmica</span>Simone Telles Martins Ramos</p>
+
+          <h6>Equipe</h6>
+          <p><span class="funcao">Docente responsável</span>Fabiana Maris Versuti</p>
+          <p><span class="funcao">Coordenação</span>Édison Trombeta</p>
+          <p><span class="funcao">Roteirização e Design Instrucional</span>Cida Azevedo</p>
+          <p><span class="funcao">Layout</span>Natasha Higa</p>
+          <p><span class="funcao">Ilustração</span>Francesco Micieli</p>
+          <p><span class="funcao">Programação</span>William Kimura</p>
+
+          <p style="margin-top: 1rem"><strong>Referência:</strong> MIZUKAMI, Maria da Graça Nicoletti. Ensino: as abordagens do processo. São Paulo: E.P.U., 1992.
+          </p>
+
+        </div>
+        <div class="modal-footer">
+          <p>Outubro/2019</p>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arquivos Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- jsSocials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <script>
+  var share = $("#share-buttons");
+  var page_title = $(document).attr('title');
+  var page_url = window.location.href;
+  share.jsSocials({
+    shares: [
+      {
+        share: "facebook",
+        label: "Facebook",
+        logo: "fab fa-facebook-f",
+      },
+      {
+        share: "twitter",
+        label: "Twitter",
+        logo: "fab fa-twitter",
+      },
+      {
+        share: "whatsapp",
+        label: "Whatsapp",
+        logo: "fab fa-whatsapp",
+      },
+    ],
+    url: page_url,
+    text: 'Confira o REA ' + page_title + '.',
+    showLabel: true,
+    showCount: false,
+    shareIn: "popup",
+  });
+  </script>
+
+
+  <!-- Custom JS -->
+  <script src="javascripts/sticky-kit.js"></script>
+  <script type="text/javascript" src="javascripts/events.js"></script>
+
+  <!-- MathJax. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+
+  <!-- Analytics. Remova em caso de reutilização do REA -->
+  <script src="https://apps.univesp.br/common/analytics.js"></script>
+
+</body>
+
+</html>
