@@ -40,12 +40,7 @@ h2 {
     font-size: 4.5rem;
   }
 }
-@media (max-width: 575.98px) {
-  h2 {
-    /* font-size: 3rem;
-    max-width: 20rem; */
-  }
-}
+
 @media (max-width: 499px) {
     h2 {
       font-size: 3rem;
@@ -181,17 +176,4 @@ ol > li:before {
 }
 .conclusao p:last-of-type {
   margin-bottom: 0;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 1199.98px) {
-
-}
-
-@media (max-width: 767.98px) {
-
-}
-
-@media (max-width: 575.98px) {
-
 }

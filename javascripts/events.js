@@ -1,15 +1,15 @@
 $(document).ready(function(){
 
-  // var larguraDocumento = $( document ).width();
   var larguraDocumento = $( window ).outerWidth();
-  console.log("largura1 - " + larguraDocumento)
 
-  //SACA CARTA
+  //CONTROLE CARTAS
 
   //Indicador de cartas restantes no monte
   var monteCartas = 10;
+
   //PARA TESTE
   // var monteCartas = 2;
+
   $(".coluna1 h5").text("Restam " + monteCartas + " cartas");
   function atualizaMonte(){
     if (monteCartas > 1){
@@ -20,7 +20,6 @@ $(document).ready(function(){
     $(".coluna1 h5").text("Você está na última carta");
   }
 }
-
 
   //Função que recebe um array e devolve ele embaralhado.
   function shuffle(array) {
@@ -44,24 +43,20 @@ $(document).ready(function(){
 
   // Determinação de ordem das cartas com randomização
   var sequenciaCartas = ["1","2","3","4","5","6","7","8","9","10"]
-  console.log("sequencia original - " + sequenciaCartas);
+  // console.log("sequencia original - " + sequenciaCartas);
   novasequenciaCartas = shuffle(sequenciaCartas);
-  console.log("sequencia embaralhada - " + novasequenciaCartas);
+  // console.log("sequencia embaralhada - " + novasequenciaCartas);
 
   i = 0
   var cartaAtual = 0
   var proximaCarta = "#card" + novasequenciaCartas[i]
-  console.log(proximaCarta)
 
+  // Ações para clique no deck
   function sacaCarta(){
     if (monteCartas == 10) {
       $(".carta").show();
       $(".respostas>div").fadeIn();
     };
-    console.log("NOVA CARTA!!")
-    console.log("valor i " + i);
-    console.log("Carta atual antes - " + cartaAtual);
-    console.log("Próxima carta antes - " + proximaCarta);
     $(proximaCarta).show();
     $(cartaAtual).addClass("animated fadeOut");
     $(proximaCarta).addClass("animated fadeInUp");
@@ -72,8 +67,6 @@ $(document).ready(function(){
     proximaCarta = "#card" + novasequenciaCartas[i]
     $(".coluna1 h5 span").addClass("pulsante");
     $(".cliqueCarta").fadeOut();
-    console.log("Carta atual depois - " + cartaAtual);
-    console.log("Próxima carta depois - " + proximaCarta);
     dicasAbertas = 0;
     resetaRespostas();
     $("#botao-responder").addClass("desligado");
@@ -83,7 +76,6 @@ $(document).ready(function(){
   $(".deck").click(function() {
 
     if ($(this).hasClass("desbloq")){
-      console.log("desbloqueado");
       $(".proxima-carta").prev().addClass("proxima-carta");
       $(".mobile .deck img:first-of-type").addClass("animated pulse");
       $(".proxima-carta.liberado").addClass("animated fadeOutUp");
@@ -93,6 +85,7 @@ $(document).ready(function(){
     }
   });
 
+  // Ações para mostrar resultado final
   function resultadoFinal(){
     if (larguraDocumento > 767.98){
     setTimeout(function(){
@@ -103,6 +96,7 @@ $(document).ready(function(){
     }
   }
 
+  // Devolve o feedback com base no cálculo de pontos
   function printaResultado(){
     $(".resultado .container span").append(pontos);
     if (pontos>139) {
@@ -120,8 +114,6 @@ $(document).ready(function(){
     }
   }
 
-
-
   //libera próxima carta
   function liberaProxima(){
     if (monteCartas>0) {
@@ -135,25 +127,18 @@ $(document).ready(function(){
   }
   //resolve carta atual
   function resolveCarta(){
-    console.log("esta é a carta atual" + cartaAtual)
     $(cartaAtual).addClass("resolvida");
     var dicasAtuais = cartaAtual + " .collapse";
     $(dicasAtuais).addClass("show");
     $(cartaAtual + " .instrucoes-carta").hide();
     var botoesAtuais = cartaAtual + " .dica div:first-of-type";
     $(botoesAtuais).off();
-    console.log(botoesAtuais)
     // Detecta clique na carta para virá-la
     $(".card-container.resolvida").click(function() {
       gira_carta($(this));
     });
     gira_carta($(cartaAtual));
   }
-
-  // $("#botao-responder").click(function(){
-  //   liberaProxima();
-  //   resolveCarta();
-  // })
 
 
   //ROTATING CARDS
@@ -170,7 +155,6 @@ $(document).ready(function(){
 
   //CÁLCULO PONTUAÇÃO
   var pontos = 160
-  console.log(pontos + " pontos")
 
   //ABRE DICA
   //Esconde instrução das dicas após aberta a última
@@ -186,12 +170,11 @@ $(document).ready(function(){
     pontos--;
     dicasAbertas++;
     if (dicasAbertas>6){
-      console.log("penúltima dica");
       $(cartaAtual + " .instrucoes-carta").hide();
     };
-    console.log(pontos + " pontos");
   })
 
+  // Volta as respostas ao estado original
   function resetaRespostas(){
     $(".feedback-imediato").hide();
     $(".feedback-esgotado").hide();
@@ -261,6 +244,7 @@ $(document).ready(function(){
       respostaErrada(este)
     }
   })
+
   //AÇÕES PARA RESPOSTAS
   function travaTudo(){
     $(".alternativas div").addClass("bloqueado");
@@ -280,7 +264,6 @@ $(document).ready(function(){
   function respostaErrada(este){
     este.addClass("resp-errada");
     pontos--;
-    console.log(pontos + " pontos")
     if (dicasAbertas>7) {
       resolveCarta();
       if (monteCartas > 0) {
@@ -305,11 +288,11 @@ $(document).ready(function(){
 
   function scrollmeiodaResposta(){
     if ($('.respostas>div').hasClass("estatico")){
-      console.log("scroll meio da resposta")
       $("html, body").animate({ scrollTop: $(".respostas").offset().top - 50  }, 500);
     }
   }
 
+  // Ações para clique nos botões dos feedbacks
   $(".fecha-feedback").click(function(){
     // resetaRespostas();
     $(".alternativas").addClass("recolhido");
@@ -320,13 +303,11 @@ $(document).ready(function(){
   });
 
   $(".feedback-correto .fecha-feedback").click(function(){
-    console.log("deu certo");
     scrolltopodaCarta();
   });
 
   $(".feedback-correto-final .fecha-feedback").click(function(){
     resultadoFinalMobile();
-    //respostas $(".feedback-correto-final").hide();
     $(".respostas").fadeOut();
   });
 
@@ -336,7 +317,6 @@ $(document).ready(function(){
 
   $(".feedback-esgotado-final .fecha-feedback").click(function(){
     resultadoFinalMobile();
-    // $(".feedback-esgotado-final").hide();
     $(".respostas").fadeOut();
   });
 
@@ -368,12 +348,12 @@ $.fn.isInViewport = function() {
   return elementTop < viewportBottom;
 };
 
+// Fixa o botão de resposta na parte inferior dependendo do scroll da tela
 $(window).on('resize scroll', function() {
   if (larguraDocumento < 767.98){
     $('.respostas').each(function() {
         var activeColor = $(this).attr('id');
       if ($(this).isInViewport()) {
-        console.log("entrou na viewport");
         $('.respostas>div').addClass("estatico")
         $('.respostas>div').css("box-shadow", "none");
         $('.respostas>div').css("position", "static");
@@ -381,7 +361,6 @@ $(window).on('resize scroll', function() {
         $('.respostas .alternativas>div').css("border-right", "1px solid #808080")
         $('.respostas .alternativas>div:last-of-type').css("border-bottom", "1px solid #808080")
       } else {
-        console.log("saiu da viewport");
         $('.respostas>div').removeClass("estatico")
         $('.respostas>div').css("box-shadow", "0 -1px 2px rgba(0,2,0,0.24)")
         $('.respostas>div').css("position", "fixed");
@@ -394,15 +373,12 @@ $(window).on('resize scroll', function() {
 });
 
 
-
-
 }); //fim document ready
 
 $( window ).on( "load", function() {
   //DEFINE ALTURA DAS CARTAS PELA MAIOR CARTA
   var alturaCarta = $(".maior-carta .card").height();
   var larguraJanela = $( window ).outerWidth();
-  console.log("largura janela - " + larguraJanela);
   if (larguraJanela > 767.98){
     $(".card-container").height(alturaCarta);
     $(".carta").height(alturaCarta);

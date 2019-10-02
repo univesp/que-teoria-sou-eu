@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  /* DECK */
   .coluna1 {
     display: flex;
     justify-content: center;
@@ -78,6 +80,8 @@
     margin-left: 5px;
     margin-right: 5px;
   }
+
+  /* RESPOSTAS */
   .jogo .respostas {
     flex-grow: 0;
     flex-basis: 0;
@@ -91,8 +95,8 @@
     flex-direction: column;
     align-items: center;
   }
-/* CARTAS */
 
+/* CARTAS */
   .jogo .carta .card-container {
     position: relative;
   }
