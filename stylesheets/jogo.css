@@ -191,24 +191,21 @@ Verde     #37A0AE
   cursor: default;
   pointer-events:none;
 }
-.feedback-imediato, .feedback-esgotado, .feedback-esgotado-final {
+.feedback-imediato, .feedback-esgotado, .feedback-esgotado-final, .feedback-correto, .feedback-correto-final {
   display: none;
   margin-top: 1rem;
   font-weight: 700;
+}
+.feedback-imediato, .feedback-esgotado, .feedback-esgotado-final {
   color: #CE5567;
+}
+.feedback-correto, .feedback-correto-final {
+  color: #37A0AE;
 }
 
 
 /* MEDIA QUERIES */
-@media (max-width: 1199.98px) {
-
-}
-
-@media (max-width: 767.98px) {
-
-}
-
-@media (min-width: 576px) {
+@media (min-width: 1249.98px) {
   .feedback-correto, .feedback-correto-final {
     display: none!important;
   }

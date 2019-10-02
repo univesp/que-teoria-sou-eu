@@ -1,12 +1,14 @@
 $(document).ready(function(){
 
-  var larguraDocumento = $( document ).width();
+  // var larguraDocumento = $( document ).width();
+  var larguraDocumento = $( window ).outerWidth();
+  console.log("largura1 - " + larguraDocumento)
 
   //SACA CARTA
 
   //Indicador de cartas restantes no monte
   // var monteCartas = 10;
-  var monteCartas = 10; //PARA TESTE
+  var monteCartas = 2; //PARA TESTE
   $(".coluna1 h5").text("Restam " + monteCartas + " cartas");
   function atualizaMonte(){
     if (monteCartas > 1){
@@ -33,12 +35,17 @@ $(document).ready(function(){
     return array;
   }
 
-  // Determinação de ordem das cartas
+  // Determinação de ordem das cartas sem randomizar
   var sequenciaCartas = ["1","2","3","4","5","6","7","8","9","10"]
   console.log("sequencia original - " + sequenciaCartas);
-  novasequenciaCartas = shuffle(sequenciaCartas);
-  // novasequenciaCartas = sequenciaCartas;
+  novasequenciaCartas = sequenciaCartas;
   console.log("sequencia embaralhada - " + novasequenciaCartas);
+
+  // Determinação de ordem das cartas com randomização
+  // var sequenciaCartas = ["1","2","3","4","5","6","7","8","9","10"]
+  // console.log("sequencia original - " + sequenciaCartas);
+  // novasequenciaCartas = shuffle(sequenciaCartas);
+  // console.log("sequencia embaralhada - " + novasequenciaCartas);
 
   i = 0
   var cartaAtual = 0
@@ -46,7 +53,8 @@ $(document).ready(function(){
   console.log(proximaCarta)
 
   function sacaCarta(){
-    if (monteCartas == 10) {
+    if (monteCartas == 2) {
+      $(".carta").show();
       $(".respostas>div").fadeIn();
     };
     console.log("NOVA CARTA!!")
@@ -85,7 +93,7 @@ $(document).ready(function(){
   });
 
   function resultadoFinal(){
-    if (larguraDocumento > 575.98){
+    if (larguraDocumento > 767.98){
     setTimeout(function(){
       $(".resultado").collapse();
       $("html, body").animate({ scrollTop: $(".resultado").offset().top - ( $(window).height() ) / 2  }, 800);
@@ -317,7 +325,8 @@ $(document).ready(function(){
 
   $(".feedback-correto-final .fecha-feedback").click(function(){
     resultadoFinalMobile();
-    $(".feedback-correto-final").hide();
+    //respostas $(".feedback-correto-final").hide();
+    $(".respostas").fadeOut();
   });
 
   $(".feedback-esgotado .fecha-feedback").click(function(){
@@ -326,15 +335,18 @@ $(document).ready(function(){
 
   $(".feedback-esgotado-final .fecha-feedback").click(function(){
     resultadoFinalMobile();
-    $(".feedback-esgotado-final").hide();
+    // $(".feedback-esgotado-final").hide();
+    $(".respostas").fadeOut();
   });
 
 
   // RESULTADO FINAL SOMENTE APÓS OK
   function resultadoFinalMobile(){
-    if (larguraDocumento < 575.98){
-      $(".resultado").collapse();
-      $("html, body").animate({ scrollTop: $(".resultado").offset().top - 40}, 1000);
+    if (larguraDocumento < 767.98){
+      setTimeout(function(){
+        $(".resultado").collapse();
+        $("html, body").animate({ scrollTop: $(".resultado").offset().top - 60}, 800);
+      }, 450);
       printaResultado()
   }
 }
@@ -356,7 +368,7 @@ $.fn.isInViewport = function() {
 };
 
 $(window).on('resize scroll', function() {
-  if (larguraDocumento < 575.98){
+  if (larguraDocumento < 767.98){
     $('.respostas').each(function() {
         var activeColor = $(this).attr('id');
       if ($(this).isInViewport()) {
@@ -388,8 +400,9 @@ $(window).on('resize scroll', function() {
 $( window ).on( "load", function() {
   //DEFINE ALTURA DAS CARTAS PELA MAIOR CARTA
   var alturaCarta = $(".maior-carta .card").height();
-  var larguraJanela = $( window ).width();
-  if (larguraJanela > 575.98){
+  var larguraJanela = $( window ).outerWidth();
+  console.log("largura janela - " + larguraJanela);
+  if (larguraJanela > 767.98){
     $(".card-container").height(alturaCarta);
     $(".carta").height(alturaCarta);
     $(".carta").css('min-height', alturaCarta);
@@ -397,4 +410,7 @@ $( window ).on( "load", function() {
   $(".maior-carta").removeClass("maior-carta");
   $(".collapse.show").removeClass("show");
   $("#card3").hide();
+  if (larguraJanela < 1250){
+    $(".carta").hide();
+  }
 });

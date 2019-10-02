@@ -1,24 +1,24 @@
-@media (max-width: 1199.98px) {
+@media (max-width: 1250px) {
   .jogo {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .jogo div {
-    /* border: 1px solid red; */
-  }
-  /* COLUNA 1 */
   .coluna1 {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    flex-basis: auto;
+    flex-basis: 100%;
     width: 100%;
-    max-width: 600px;
+    height: 150px;
+    margin-bottom: 2rem;
   }
   .coluna1 .desktop {
     display: none;
   }
   .coluna1 .mobile {
     display: block;
+    width: 700px;
   }
   .coluna1 .mobile .deck {
     display: flex;
@@ -33,6 +33,9 @@
   }
   .coluna1 .mobile .deck.desbloq {
     background-color: #CE5567;
+  }
+  .coluna1 .mobile .deck.desbloq h5{
+    color: #fff;
   }
   .coluna1 .mobile .deck img {
     box-shadow: none;
@@ -54,18 +57,14 @@
   .coluna1 .mobile .deck.desbloq img:last-of-type {
     display: none;
   }
-
-
   .coluna1 .mobile .deck>div {
-    margin-left: 10%;
     display: flex;
     flex-direction: column;
-  }
-
-  .coluna1 .mobile .deck p {
     width: 100%;
+    align-items: center;
+  }
+  .coluna1 .mobile .deck p {
     position: static;
-    text-align: left;
     margin-bottom: 5px;
     font-style: normal;
     color: #fff;
@@ -75,15 +74,23 @@
     margin-bottom: 0;
     font-style: normal;
     font-size: 1rem;
-    color: #fff;
+    color: #808080;
   }
+  .jogo .respostas {
+    flex-grow: 0;
+    flex-basis: 0;
+  }
+
 }
-@media (max-width: 575.98px) {
-/* CARTAS */
-  .jogo .carta {
-    /* position: relative; */
-    width: 100%;
+
+
+@media (max-width: 767.98px) {
+  .jogo {
+    flex-direction: column;
+    align-items: center;
   }
+/* CARTAS */
+
   .jogo .carta .card-container {
     position: relative;
   }
@@ -158,6 +165,10 @@
     justify-content: center;
     margin-top: 15px;
   }
+}
 
-
+@media (max-width: 575.98px) {
+  .jogo .carta {
+    width: 100%;
+  }
 }
