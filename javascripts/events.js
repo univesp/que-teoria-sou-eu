@@ -7,8 +7,9 @@ $(document).ready(function(){
   //SACA CARTA
 
   //Indicador de cartas restantes no monte
-  // var monteCartas = 10;
-  var monteCartas = 2; //PARA TESTE
+  var monteCartas = 10;
+  //PARA TESTE
+  // var monteCartas = 2;
   $(".coluna1 h5").text("Restam " + monteCartas + " cartas");
   function atualizaMonte(){
     if (monteCartas > 1){
@@ -36,16 +37,16 @@ $(document).ready(function(){
   }
 
   // Determinação de ordem das cartas sem randomizar
-  var sequenciaCartas = ["1","2","3","4","5","6","7","8","9","10"]
-  console.log("sequencia original - " + sequenciaCartas);
-  novasequenciaCartas = sequenciaCartas;
-  console.log("sequencia embaralhada - " + novasequenciaCartas);
-
-  // Determinação de ordem das cartas com randomização
   // var sequenciaCartas = ["1","2","3","4","5","6","7","8","9","10"]
   // console.log("sequencia original - " + sequenciaCartas);
-  // novasequenciaCartas = shuffle(sequenciaCartas);
+  // novasequenciaCartas = sequenciaCartas;
   // console.log("sequencia embaralhada - " + novasequenciaCartas);
+
+  // Determinação de ordem das cartas com randomização
+  var sequenciaCartas = ["1","2","3","4","5","6","7","8","9","10"]
+  console.log("sequencia original - " + sequenciaCartas);
+  novasequenciaCartas = shuffle(sequenciaCartas);
+  console.log("sequencia embaralhada - " + novasequenciaCartas);
 
   i = 0
   var cartaAtual = 0
@@ -53,7 +54,7 @@ $(document).ready(function(){
   console.log(proximaCarta)
 
   function sacaCarta(){
-    if (monteCartas == 2) {
+    if (monteCartas == 10) {
       $(".carta").show();
       $(".respostas>div").fadeIn();
     };
